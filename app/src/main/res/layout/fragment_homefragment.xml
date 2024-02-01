@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Homefragment"
+    android:scrollbarSize="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:translationZ="101dp">
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/searchbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/best_product_img_background"
+                android:translationZ="111dp"
+                android:hint="Search Products..."
+                android:textColor="@color/black"
+                android:fontFamily="@font/robotomedium"
+                android:paddingVertical="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="20dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:drawableRight="@drawable/baseline_search_24">
+            </TextView>
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageslider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/searchbar"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:translationZ="111dp"
+                app:iss_period="3000"
+                app:iss_auto_cycle="true"
+                app:iss_delay="1000"
+                app:iss_corner_radius="30">
+            </com.denzcoskun.imageslider.ImageSlider>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@id/toolbar"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="-20dp"
+                android:backgroundTint="@color/orange">
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/viewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardview"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="106dp"
+                android:fontFamily="@font/robotobold"
+                android:text="Best Product's"
+                android:textSize="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/bestproductviewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIEW ALL"
+                android:layout_below="@id/cardview"
+                android:textSize="20dp"
+                android:fontFamily="@font/robotomedium"
+                android:layout_marginTop="109dp"
+                android:layout_alignRight="@id/cardview"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/orange">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleviewBestproduct"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/bestproductviewall"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <ProgressBar
+                android:id="@+id/progressbarbestprodut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bestproductviewall"
+                android:layout_alignBottom="@+id/recycleviewBestproduct"
+                android:layout_centerInParent="true"></ProgressBar>
+
+            <TextView
+                android:id="@+id/choosecategorytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Category"
+                android:layout_below="@+id/recycleviewBestproduct"
+                android:textSize="30dp"
+                android:fontFamily="@font/robotobold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+            </TextView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleviewcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choosecategorytext"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="20dp"
+                android:foregroundGravity="center"
+                android:layout_marginBottom="70dp"
+                ></androidx.recyclerview.widget.RecyclerView>
+
+            <ProgressBar
+                android:id="@+id/progreebarcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/recycleviewcategory"
+                android:layout_alignBottom="@+id/recycleviewcategory"
+                android:layout_centerInParent="true"
+                ></ProgressBar>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

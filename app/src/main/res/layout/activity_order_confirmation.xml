@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order_confirmation"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_check_circle_24"
+        android:layout_gravity="center"></ImageView>
+
+
+    <TextView
+        android:id="@+id/textOrderConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Order Confirmed!"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textOrderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOrderConfirmation"
+        android:layout_marginTop="16dp"
+        android:text="Thank you for your order. Your order has been confirmed and will be processed shortly."
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnContinueShopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue Shopping"
+        android:fontFamily="@font/robotobold"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp">
+    </Button>
+
+</LinearLayout>

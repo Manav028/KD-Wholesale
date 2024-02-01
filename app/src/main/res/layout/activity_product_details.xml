@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".product_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".product_details"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/backbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:layout_marginLeft="10dp"
+                    android:translationZ="111dp"
+                    android:layout_marginTop="20dp">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/productimage"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="320dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_transgender_24"></ImageView>
+
+                <TextView
+                    android:id="@+id/producttitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productimage"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Product Text.."
+                    android:textSize="28dp"></TextView>
+
+                <TextView
+                    android:id="@+id/productprice"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/producttitle"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="£89.99"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp"></TextView>
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productprice"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Details"
+                    android:textSize="30dp"></TextView>
+
+                <TextView
+                    android:id="@+id/productdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/details"
+                    android:layout_marginTop="10dp"
+                    android:text="Product description"
+                    android:textSize="16dp"></TextView>
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productdesc"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Quantity"
+                    android:textSize="28dp"></TextView>
+
+                <TextView
+                    android:id="@+id/sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productdesc"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/quantity"
+                    android:background="@drawable/quantity_btn"
+                    android:fontFamily="@font/robotobold"
+                    android:paddingHorizontal="10dp"
+                    android:text="-"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp"></TextView>
+
+                <TextView
+                    android:id="@+id/productquantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productdesc"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/sub"
+                    android:fontFamily="@font/robotobold"
+                    android:text="1"
+                    android:textSize="28dp"></TextView>
+
+                <TextView
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productdesc"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/productquantity"
+                    android:background="@drawable/quantity_btn"
+                    android:fontFamily="@font/robotobold"
+                    android:paddingHorizontal="10dp"
+                    android:text="+"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp"></TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/cartbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/addtocart_btn"
+                android:fontFamily="@font/robotobold"
+                android:paddingHorizontal="20dp"
+                android:text="  Add to cart"
+                android:paddingVertical="10dp"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/baseline_shopping_cart_24"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/totalpricetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price"
+                android:textSize="20dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="£89.99"
+                android:textSize="20dp"
+                android:layout_below="@+id/totalpricetext"
+                android:fontFamily="@font/robotobold">
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

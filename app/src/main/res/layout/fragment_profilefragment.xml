@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profilefragment"
+    android:scrollbarSize="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:translationZ="101dp">
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="-20dp"
+            android:backgroundTint="@color/orange">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:layout_marginTop="-20dp"
+                    android:id="@+id/profile_pic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/baseline_person_24">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/robotobold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/profile_pic">
+                </TextView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_blackperson_24">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/profile_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/profile_icon"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:text="Loading">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_mail_outline_24">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/email_icon"
+                android:layout_marginStart="50dp"
+
+                android:text="Loading"
+                android:textSize="18dp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <ImageView
+                android:id="@+id/dob_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_calendar_month_24">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/profile_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/dob_icon"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:text="Loading">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <ImageView
+                android:id="@+id/gender_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_transgender_24">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/profile_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/gender_icon"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:text="Loading">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <ImageView
+                android:id="@+id/phone_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_phone_android_24">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/profile_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/phone_icon"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:text="Loading">
+            </TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

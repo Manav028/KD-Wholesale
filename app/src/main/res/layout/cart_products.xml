@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="10dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/productimage"
+                android:layout_width="110dp"
+                android:layout_height="120dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/producttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giftmaker Christmas Red Gold White Foil Gift Wrap 1.5M X 69Cm"
+                android:maxLines="2"
+                android:layout_toRightOf="@id/productimage"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"
+                android:fontFamily="@font/robotobold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/productqunatitytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/producttitle"
+                android:layout_toRightOf="@id/productimage"
+                android:layout_marginLeft="10dp"
+                android:text="4 * $23.00"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productqunatitytext"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/productimage"
+                android:layout_marginLeft="10dp"
+                android:text="REMOVE"
+                android:textSize="17dp"
+                android:fontFamily="@font/robotobold"
+                android:textColor="@color/orange">
+            </TextView>
+
+            <TextView
+                android:id="@id/totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="$46.00"
+                android:textSize="20dp"
+                android:fontFamily="@font/robotobold"
+                android:layout_below="@id/productqunatitytext"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                >
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

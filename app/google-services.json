@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902892107527",
+    "project_id": "kd-wholesale",
+    "storage_bucket": "kd-wholesale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902892107527:android:5413476d5ee576f8c2b7a2",
+        "android_client_info": {
+          "package_name": "com.example.kdwholesale"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4976okB6E94Whg37wKaJO4RGVlMDS_40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

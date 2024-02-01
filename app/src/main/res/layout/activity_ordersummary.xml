@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ordersummary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+                <ImageView
+                    android:id="@+id/backbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_arrow_back_24">
+                </ImageView>
+                <TextView
+                    android:id="@+id/ordersummarytext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:background="@null"
+                    android:fontFamily="@font/robotobold"
+                    android:inputType="text"
+                    android:text="Order Summary"
+                    android:textSize="20dp">
+                </TextView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orderitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:nestedScrollingEnabled="false">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summarycardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderitems"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/subtotaltext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/Deliverytext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/subtotaltext"
+                        android:text="Delivery"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/Delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:layout_below="@id/subtotaltext"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/totaltaxtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Deliverytext"
+                        android:text="Total Tax"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/totaltax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:layout_below="@id/Deliverytext"
+                        android:layout_alignParentRight="true"
+                        android:textSize="20dp">
+                    </TextView>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"
+                        android:layout_below="@id/totaltaxtext"
+                        android:layout_marginTop="10dp">
+                    </View>
+
+                    <TextView
+                        android:id="@+id/Totaltext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_marginTop="10dp"
+                        android:textSize="25dp"
+                        android:text="Total"
+                        android:fontFamily="@font/robotobold"
+                        ></TextView>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:layout_below="@id/line"
+                        android:layout_alignParentRight="true"
+                        android:textSize="25dp"
+                        android:layout_marginTop="10dp">
+                    </TextView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cardsumaarrrytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/summarycardview"
+                android:text="Card Details"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/robotobold">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carddetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardsumaarrrytext"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/cardnumberdetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp">
+                    </TextView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/addresstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carddetails"
+                android:textSize="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Address Details"
+                android:fontFamily="@font/robotobold">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/adddetailsdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addresstext"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="3dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/streettext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Street : "
+                        android:textSize="16dp"
+                        android:fontFamily="@font/robotobold">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/Street"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/streettext"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:text="street address">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/citytext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City : "
+                        android:textSize="16dp"
+                        android:layout_below="@id/Street"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/robotobold">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/streettext"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/Street"
+                        android:text="City data">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/postcodetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Postcode : "
+                        android:textSize="16dp"
+                        android:layout_below="@id/city"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/robotobold">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/postcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/streettext"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/city"
+                        android:text="City data">
+                    </TextView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CartFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".product_details"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/orange"
+                    android:translationZ="101dp">
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleproductcart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_marginTop="18dp"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingHorizontal="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/ordersummarytext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recycleproductcart"
+                    android:text="Order Summary"
+                    android:layout_marginTop="20dp"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/robotobold"
+                    android:paddingHorizontal="20dp">
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/summarycardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ordersummarytext"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="3dp"
+                    android:layout_marginHorizontal="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/subtotaltext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subtotal"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/subtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:layout_alignParentRight="true"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/Deliverytext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/subtotaltext"
+                            android:text="Delivery"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/Delivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:layout_below="@id/subtotaltext"
+                            android:layout_alignParentRight="true"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/totaltaxtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Deliverytext"
+                            android:text="Total Tax"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/totaltax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:layout_below="@id/Deliverytext"
+                            android:layout_alignParentRight="true"
+                            android:textSize="28dp">
+                        </TextView>
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"
+                            android:layout_below="@id/totaltaxtext"
+                            android:layout_marginTop="10dp">
+                        </View>
+
+                        <TextView
+                            android:id="@+id/Totaltext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line"
+                            android:layout_marginTop="10dp"
+                            android:textSize="28dp"
+                            android:text="Total"
+                            android:fontFamily="@font/robotobold"
+                            ></TextView>
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:layout_below="@id/line"
+                            android:layout_alignParentRight="true"
+                            android:textSize="28dp"
+                            android:layout_marginTop="10dp">
+                        </TextView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/orderbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_bar_background"
+                    android:text="Place order"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/summarycardview"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:paddingVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    ></TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
